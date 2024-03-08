@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif ;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.bbd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button2 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button2:hover {
+  opacity: 0.8;
+}
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script type="module">
+
+  
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import {  getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKOGvOb_plKMaH_oec_E5wSY0shY27Z9E",
+  authDomain: "ge-lite.firebaseapp.com",
+  projectId: "ge-lite",
+  storageBucket: "ge-lite.appspot.com",
+  messagingSenderId: "1004534306152",
+  appId: "1:1004534306152:web:02b96781116ecdd70f72dd"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+
+const formDAT = document.getElementById('fmm');
+
+formDAT.addEventListener('submit', event =>{
+   event.preventDefault();
+    console.log('good')
+   const formData = new FormData(formDAT);
+  let email = formData.get('email');
+  let password = formData.get('password');
+    
+
+  if(formData){
+    notyf.success("Loading...");
+    console.log(password);
+signInWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+  window.location.href = "./dash.html";
+})
+.catch((error) => {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  notyf.error(errorCode);
+});
+  }else{
+    notyf.error('something went wrong');
+  }
+
+     
+});
+
+
+
+
+
+</script>
+
+
+<script>
+    // HIDDEN ORIGIN KEYS
+  
+  //   if(window.innerWidth === window.outerWidth){
+  // }else{
+  // window.location.href = "http://www.google.com";
+  // }
+  
+  
+  document.addEventListener("contextmenu", function (e){
+  e.preventDefault();
+  })
+  
+  document.onkeydown = function (e) {
+  if (e.keyCode == 123){
+  return false;
+  }
+  
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "I" .charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "C" .charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "j".charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "U" .charCodeAt (0)) {
+  return false;
+  }
+  };
+  
+  </script>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <script>
+      var notyf = new  Notyf({
+    duration: 2000,
+    position: {
+      x: 'right',
+      y: 'top',
+    },
+  });
+      
+    </script>
+
+    <div class="bbd">
+
+<form id="fmm">
+  <div class="imgcontainer">
+    <img src="./admin.jpeg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        
+    <input class="button2" type="submit" value="Login" />
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="./forgotten.html">password?</a></span>
+  </div>
+</form>
+
+    </div>
+
+
+
+</body>
+</html>

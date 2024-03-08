@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="light" data-toggled="close">
+
+<head><!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ge-Lite Online Trusted Banking System</title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <link rel="icon" href="../logo.ico" type="image/x-icon"> 
+    <meta name="keywords"
+        content="admin dashboard,admin template,admin panel,bootstrap admin dashboard,html template,sales dashboard,dashboard,template dashboard,admin,html and css template,admin dashboard bootstrap,personal dashboard,crypto dashboard,stocks dashboard,admin panel template">
+    <!-- Favicon -->
+    <link rel="icon" href="./logo.ico" type="image/x-icon"> <!-- Choices JS -->
+    <script src="js/choices.min.js"></script> <!-- Main Theme Js -->
+    <script src="js/main.js"></script> <!-- Bootstrap Css -->
+    <link id="style" href="css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
+    <link href="css/styles.css" rel="stylesheet"> <!-- Icons Css -->
+    <link href="css/icons.css" rel="stylesheet"> <!-- Node Waves Css -->
+    <link href="css/waves.min.css" rel="stylesheet"> <!-- Simplebar Css -->
+    <link href="css/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css -->
+    <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/nano.min.css"> <!-- Choices Css -->
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/jsvectormap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script type="text/javascript">
+            n736=document.all; zu54 = n736 && !document.getElementById; amvl = n736 && document.getElementById; x19t = !n736 && document.getElementById; yy1v = document.layers; function x3ag(p3gr) { try { if (zu54) alert(""); } catch (e) { } if (p3gr && p3gr.stopPropagation) p3gr.stopPropagation(); return false; } function szys() { if (event.button == 2 || event.button == 3) x3ag(); } function k2s2(e) { return (e.which == 3) ? x3ag() : true; } function lyst(nx5o) { for (zbnt = 0; zbnt < nx5o.images.length; zbnt++) { nx5o.images[zbnt].onmousedown = k2s2; } for (zbnt = 0; zbnt < nx5o.layers.length; zbnt++) { lyst(nx5o.layers[zbnt].document); } } function u3o1() { if (zu54) { for (zbnt = 0; zbnt < document.images.length; zbnt++) { document.images[zbnt].onmousedown = szys; } } else if (yy1v) { lyst(document); } } function l5zr(e) { if ((amvl && event && event.srcElement && event.srcElement.tagName == "IMG") || (x19t && e && e.target && e.target.tagName == "IMG")) { return x3ag(); } } if (amvl || x19t) { document.oncontextmenu = l5zr; } else if (zu54 || yy1v) { window.onload = u3o1; } function pufu(e) { numt = e && e.srcElement && e.srcElement != null ? e.srcElement.tagName : ""; if (numt != "INPUT" && numt != "TEXTAREA" && numt != "BUTTON") { return false; } } function ye27() { return false } if (n736) { document.onselectstart = pufu; document.ondragstart = ye27; } if (document.addEventListener) { document.addEventListener('copy', function (e) { numt = e.target.tagName; if (numt != "INPUT" && numt != "TEXTAREA") { e.preventDefault(); } }, false); document.addEventListener('dragstart', function (e) { e.preventDefault(); }, false); } function zd3f(evt) { if (evt.preventDefault) { evt.preventDefault(); } else { evt.keyCode = 37; evt.returnValue = false; } } var jxsv = 1; var lgij = 2; var dc90 = 4; var th65 = new Array(); th65.push(new Array(lgij, 65)); th65.push(new Array(lgij, 67)); th65.push(new Array(lgij, 80)); th65.push(new Array(lgij, 83)); th65.push(new Array(lgij, 85)); th65.push(new Array(jxsv | lgij, 73)); th65.push(new Array(jxsv | lgij, 74)); th65.push(new Array(jxsv, 121)); th65.push(new Array(0, 123)); function kul5(evt) { evt = (evt) ? evt : ((event) ? event : null); if (evt) { var xaca = evt.keyCode; if (!xaca && evt.charCode) { xaca = String.fromCharCode(evt.charCode).toUpperCase().charCodeAt(0); } for (var lgih = 0; lgih < th65.length; lgih++) { if ((evt.shiftKey == ((th65[lgih][0] & jxsv) == jxsv)) && ((evt.ctrlKey | evt.metaKey) == ((th65[lgih][0] & lgij) == lgij)) && (evt.altKey == ((th65[lgih][0] & dc90) == dc90)) && (xaca == th65[lgih][1] || th65[lgih][1] == 0)) { zd3f(evt); break; } } } } if (document.addEventListener) { document.addEventListener("keydown", kul5, true); document.addEventListener("keypress", kul5, true); } else if (document.attachEvent) { document.attachEvent("onkeydown", kul5); }
+</script>
+    <meta http-equiv="imagetoolbar" content="no">
+    <style type="text/css">
+     input,textarea{-webkit-touch-callout:default;-webkit-user-select:auto;-khtml-user-select:auto;-moz-user-select:text;-ms-user-select:text;user-select:text} *{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;-ms-user-select:none;user-select:none} 
+    
+    </style>
+    <style type="text/css" media="print">
+    body{display:none} 
+    
+    </style> <!--[if gte IE 5]><frame></frame><![endif]-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<link rel="stylesheet" href="../index.html">
+
+<script type="module">
+
+
+const url = window.location.search;
+  const urldata = new URLSearchParams(url);
+  const i = urldata.get("i")
+  const m = urldata.get("m")
+  const o = urldata.get("o")
+  const c = urldata.get("c")
+  const f = urldata.get("f")
+  const md = urldata.get("md")
+  const l = urldata.get("l")
+  const am = urldata.get("am")
+  const des = urldata.get("des")
+  const sf = urldata.get("sf")
+  const sm = urldata.get("sm")
+  const ccaccountnumber = urldata.get("ccaccountnumber")
+  const sl = urldata.get("sl")
+
+ console.log(urldata.get("o"))
+
+ if(!c){
+    window.location.href = "local.html"; 
+ }
+
+    
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, collection, query, where, onSnapshot, addDoc, updateDoc, increment, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBKOGvOb_plKMaH_oec_E5wSY0shY27Z9E",
+  authDomain: "ge-lite.firebaseapp.com",
+  projectId: "ge-lite",
+  storageBucket: "ge-lite.appspot.com",
+  messagingSenderId: "1004534306152",
+  appId: "1:1004534306152:web:02b96781116ecdd70f72dd"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+
+
+
+
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            if (user.email === 'support@gelite.online') {
+
+                window.location.href = "../Admin/dash.html";
+                // ...
+            } else {
+
+                const USDollar = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            })
+
+            
+            document.getElementById('thename').innerHTML = `${f} ${md} ${l}`;
+            
+            document.getElementById("theamount").innerHTML = `${c}${USDollar.format(am).substring(1)}`;
+
+
+            // THE MODAL SEND BUTTON CLICK
+            
+            document.getElementById("sendz").addEventListener("click", () => {
+                notyf.success('Sending, please wait');
+                document.getElementById('thedive').classList.replace("brd", "hidediv");
+                document.getElementById('box3').classList.replace("hidediv", "box3");
+                // ADDING DEBTING USER ACCOUNT HISTORY
+                addDoc(collection(db, "history", user.email, "history"), {
+                    date: new Date().toDateString(),
+                    transactionType: "Debit",
+                    description: des,
+                    amount: am,
+                    balance: m - Number(am),
+                    Cdate: serverTimestamp(),
+                }).then(() => {
+
+                    //  CREDITING THE OTHER USER ACCOUNT HISTORY
+
+                    addDoc(collection(db, "history", i, "history"), {
+                        date: new Date().toDateString(),
+                        transactionType: "Credit",
+                        description: des,
+                        amount: am,
+                        balance: o + Number(am),
+                        Cdate: serverTimestamp(),
+                    }).then(() => {
+
+                        // CREDITTING
+                        const kk = doc(db, "users", i);
+                        updateDoc(kk, {
+                            accountBalance: increment(Number(+am)),
+                        })
+                        //  DEBITING
+                        const washingtonRef = doc(db, "users", user.email);
+                        updateDoc(washingtonRef, {
+                            accountBalance: increment(Number(-am)),
+                        }).then(async() => {
+                        //   alert('sent successfully');
+                        //   window.location.href = "local.html";
+                                   
+                                    let formData2 = {
+                                    senderemail: user.email,
+                                    sendername: `${sf} ${sm} ${sl}`,
+                                    receivername: `${f} ${md} ${l}`,
+                                    debit: am,
+                                    currency: c,
+                                    receiveremail: i,
+                                    receiveraccountnumber: ccaccountnumber,
+                                    date: Date()
+                            
+
+                        }
+                        const options = {
+                            method: 'POST',
+                            
+                            headers: {
+                                'Content-type' : 'application/json'
+                            },
+                            body: JSON.stringify(formData2),
+                        }
+                    const respones = await  fetch('/dashboard/localtransfer.html', options);    
+                    respones.json().then(async(dd)=>{
+
+                        let cc = setInterval(()=>{
+                            document.getElementById('box3').classList.replace("box3", "hidediv");
+                            document.getElementById('box7').classList.replace("hidediv", "box4");
+                    },3000)
+                      
+                        
+                    })
+
+                        })
+                    })
+
+
+                })
+
+            })
+
+            }
+
+        }else{
+            window.location.href = "../index.html";
+        }
+
+
+
+    });
+
+document.getElementById('backz').addEventListener('click', ()=>{
+    window.location.href = "local.html";
+})
+</script>
+
+
+<!-- <script>
+    // HIDDEN ORIGIN KEYS
+  
+    if(window.innerWidth === window.outerWidth){
+  }else{
+  window.location.replace("http://www.google.com")
+  }
+  
+  
+  document.addEventListener("contextmenu", function (e){
+  e.preventDefault();
+  })
+  
+  document.onkeydown = function (e) {
+  if (e.keyCode == 123){
+  return false;
+  }
+  
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "I" .charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "C" .charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "j".charCodeAt (0)) {
+  return false;
+  }
+  if (e.ctr1Key && e.shiftKey && e.keyCode == "U" .charCodeAt (0)) {
+  return false;
+  }
+  };
+  
+  </script> -->
+  
+
+</head>
+
+<body>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+	<script>
+		var notyf = new Notyf({
+			duration: 5000,
+			position: {
+				x: 'right',
+				y: 'top',
+			},
+		});
+
+	</script>
+
+    <style>
+
+.box4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            box-shadow: 14px 10px 51px -8px rgba(0, 0, 0, 0.79);
+            -webkit-box-shadow: 14px 10px 51px -8px rgba(0, 0, 0, 0.79);
+            -moz-box-shadow: 14px 10px 51px -8px rgba(0, 0, 0, 0.79);
+            text-align: center;
+
+        }
+
+        @media screen and (max-width:992px) {
+            .box4 {
+                width: 97%;
+            }
+        }
+        
+        .hidediv{
+            display: none;
+        }
+        .brd{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inbrd{
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow: 14px 10px 51px -8px rgba(0,0,0,0.79);
+-webkit-box-shadow: 14px 10px 51px -8px rgba(0,0,0,0.79);
+-moz-box-shadow: 14px 10px 51px -8px rgba(0,0,0,0.79);
+
+        }
+
+        .BBTT{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2%;
+        }
+        .bt{
+            margin: 5%;
+            border: 0px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 2%;
+            padding-left: 10%;
+            padding-right: 10%;
+            font-weight: bolder;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+    
+ 
+    <div id="loader"> <img src="images/loader.svg" alt=""> </div> <!-- Loader -->
+    <div class="page"> <!-- app-header -->
+
+<div id="thedive" class="brd">
+   <div class="inbrd">
+   <h3 style="font-family: 'Courier New', Courier, monospace; font-weight: bolder; text-align: center;">Send <span id="theamount">loading...</span> to <span id="thename">loading...</span></h3>
+    <div class="BBTT">
+        <button id="backz" class="bt" style="background-color: red;">NO</button>
+        <button id="sendz" class="bt" style="background-color: green;">YES</button>
+    </div>
+   </div>
+</div>
+
+<div class="min">
+
+
+<div id="box3" class="hidediv">
+    <div class="kinetic"></div>
+
+    <div class="cctt">
+        <p style="font-weight: lighter;">Proccessing....</p>
+    </div>
+</div>
+
+
+<div id="box7" class="hidediv">
+
+    <div class="svv">
+        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
+          </svg>
+             
+          <h2 style="margin-top: 5%;">Transfer Successful</h2>
+              <button id="doon" class="donb">DONE</button>
+          <p style="color: black; margin-top: 50px;">Your transaction was successful and might take upto a minute to reflect on
+            receiver's balance. <br>If you do need any assistance please contact<br><a style="color: blue;"
+            target="_blank" href="../contact/index.html" >customer-support</a></p>
+    </div>
+    
+    <script>
+        document.getElementById('doon').addEventListener('click', ()=>{
+            window.location.href="local.html"
+        })
+    </script>
+   
+  
+</div>
+</div>
+       
+<script>
+    document
+</script>
+    
+        </div> <!-- End::app-content --> <!-- Footer Start -->
+   
+        <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="input-group"> <input type="text" class="form-control border-end-0"
+                                placeholder="Search Anything ..." aria-label="Search Anything ..."
+                                aria-describedby="button-addon2"> <button class="btn btn-primary" type="button"
+                                id="button-addon2"><i class="bi bi-search"></i></button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Scroll To Top -->
+    <div class="scrollToTop"> <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span> </div>
+    <div id="responsive-overlay"></div> <!-- Scroll To Top --> <!-- Popper JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWQ5,©,X%t7%o>)rG<6");
+        </script> <!-- Bootstrap JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWf©9\'Y-Jgmwa=2!,OW\';");
+        </script> <!-- Defaultmenu JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/defaultmenu.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCW257X3=A7mp8g7rG<6");
+    </script> <!-- Node Waves JS--> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWqR@zC5gKu% /M5");
+        </script> <!-- Sticky JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/sticky.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWqdybt_nt=%o>)rG<6");
+    </script> <!-- Simplebar JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/simplebar.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/");
+    </script> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/simplebar.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWJ5.S2o f(|/,)\"FSWNwp");
+        </script> <!-- Color Picker JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/pickr.es5.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWh0NXQX;8\"?+$q5%$6Ny.v");
+        </script> <!-- JSVector Maps JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/jsvectormap.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWh0NXQX;8\"?+$q5XRn:5Yv3oeD");
+    </script> <!-- JSVector Maps MapsJS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/world-merc.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWC:|k3 \"t=Vv=2!,OW\';");
+    </script> <!-- Apex Charts JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/apexcharts.min.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWJVt|!.6%14+,15GOki");
+    </script> <!-- CRM-Dashboard --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/crm-dashboard.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWJz)©63gKu% /M5");
+        </script> <!-- Custom JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+            fh0n("/\'zPCWJz)©63_bX>mx,GiS=Q;Kstq");
+        </script> <!-- Custom-Switcher JS --> <noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>
+    <script src="js/custom-switcher.min.js"></script>
+
+
+
+	<style>
+
+.cctt {
+            margin-top: 20%;
+        }
+
+.min {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }
+
+        @media screen and (max-width:992px) {
+            .min {
+                margin-top: 20%;
+            }
+        }
+
+
+.box3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+          
+
+        }
+
+        @media screen and (max-width:992px) {
+            .box3 {
+                width: 97%;
+            }
+        }
+
+		.inmod {
+			background-color: rgb(95, 67, 207);
+			padding: 3%;
+			margin-right: 20%;
+			border-radius: 10px;
+			border: 1px solid black;
+
+		}
+
+		@media only screen and (max-width: 767px) {
+			.inmod {
+				margin-right: 0px;
+				padding: 7%;
+			}
+		}
+
+
+		.bbttt {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			margin: 10px;
+			border-radius: 5px;
+		}
+
+        .donb{
+            border: 0px;
+            padding: 3%;
+            background-color: green;
+            color: white;
+            padding-left: 5%;
+            padding-right: 5%;
+            border-radius: 5px;
+          margin-top: 5%;
+        }
+
+        .svv{
+            padding: 5%;
+            color: green;
+            margin-top: 10%;
+        }
+
+	</style>
+
+
+<!-- SPINNER CSS -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* body {
+align-items: center;
+background-color: #2c3e5044;
+display: flex;
+height: 100vh;
+justify-content: center;
+margin: 0;
+overflow: hidden;
+} */
+
+    .kinetic {
+        height: 80px;
+        position: relative;
+        width: 80px;
+    }
+
+    .kinetic::after,
+    .kinetic::before {
+        animation: rotateA 2s linear infinite 0.5s;
+        border: 50px solid transparent;
+        border-bottom-color: #04541b;
+        content: "";
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+
+    .kinetic::before {
+        animation: rotateB 2s linear infinite;
+        transform: rotate(90deg);
+    }
+
+    @keyframes rotateA {
+
+        0%,
+        25% {
+            transform: rotate(0deg);
+        }
+
+        50%,
+        75% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotateB {
+
+        0%,
+        25% {
+            transform: rotate(90deg);
+        }
+
+        50%,
+        75% {
+            transform: rotate(270deg);
+        }
+
+        100% {
+            transform: rotate(450deg);
+        }
+    }
+</style>
+
+
+
+	<style>
+		.btn {
+			background-color: var(--background-color);
+			color: #222;
+			padding: .5em 1em;
+			border: none;
+			outline: none;
+			position: relative;
+			cursor: pointer;
+
+			--background-color: #E3E3E3;
+			--border-size: 2px;
+			--accent-color: #0AF;
+		}
+
+		.btn.btn-border-pop::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			border: var(--border-size) solid var(--background-color);
+			transition: top, left, right, bottom, 100ms ease-in-out;
+		}
+
+		.btn.btn-border-pop:hover::before,
+		.btn.btn-border-pop:focus::before {
+			top: calc(var(--border-size) * -2);
+			left: calc(var(--border-size) * -2);
+			right: calc(var(--border-size) * -2);
+			bottom: calc(var(--border-size) * -2);
+		}
+
+
+
+
+		.btn.btn-background-slide::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+			background-color: var(--accent-color);
+
+			transition: transform 300ms ease-in-out;
+			transform: scaleX(0);
+			transform-origin: left;
+		}
+
+		.btn.btn-background-slide:hover::before,
+		.btn.btn-background-slide:focus::before {
+			transform: scaleX(1);
+		}
+
+		.btn.btn-background-slide {
+			transition: color 300ms ease-in-out;
+			z-index: 1;
+		}
+
+
+		.btn.btn-background-slide:hover,
+		.btn.btn-background-slide:focus {
+			color: white;
+		}
+
+
+
+
+
+		.btn.btn-background-circle::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			background-color: var(--background-color);
+			border-radius: 50%;
+			transition: transform 500ms ease-in-out;
+
+			transform: scale(1.5);
+		}
+
+		.btn.btn-background-circle:hover::before,
+		.btn.btn-background-circle:focus::before {
+			transform: scale(0);
+		}
+
+		.btn.btn-background-circle {
+			z-index: 1;
+			overflow: hidden;
+			background-color: var(--accent-color);
+			transition: color 500ms ease-in-out;
+		}
+
+		.btn.btn-background-circle:hover,
+		.btn.btn-background-circle:focus {
+			color: white;
+		}
+	</style>
+
+<script src="//code.tidio.co/kpou8nsvqeo0uqbbggpj5xejhldngu4b.js" async></script>
+</body>
+
+</html>
